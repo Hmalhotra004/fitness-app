@@ -5,9 +5,9 @@
     <color name="mainColor">#101322</color>
     <color name="orange">#fd511e</color>
     <color name="darkBlue">#1c213c</color>
-    <color name="pink">#ff3ab0</color>
-    <color name="toolbar">#83125B</color>
-    <color name="grey">#8E8C87</color>
+    <color name="blue">#3121e4</color>
+    <color name="toolbar">#1e1b4b</color>
+    <color name="grey">#383030</color>
     <color name="red">#DF1D1D</color>
-    <color name="card">#E9A7E9</color>
+    <color name="card">#97C5C7</color>
 </resources>
