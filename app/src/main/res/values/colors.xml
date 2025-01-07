@@ -6,4 +6,8 @@
     <color name="orange">#fd511e</color>
     <color name="darkBlue">#1c213c</color>
     <color name="pink">#ff3ab0</color>
+    <color name="toolbar">#83125B</color>
+    <color name="grey">#8E8C87</color>
+    <color name="red">#DF1D1D</color>
+    <color name="card">#E9A7E9</color>
 </resources>
