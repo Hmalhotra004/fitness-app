@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Button background color -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Border properties -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/white" />
+
+    <!-- Corner radius -->
+    <corners android:radius="8dp" />
+</shape>
