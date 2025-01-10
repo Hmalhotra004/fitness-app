@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.glide)
     implementation(libs.android.gif.drawable)
+    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.30")
 }

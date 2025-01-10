@@ -4,10 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mainColor">#101322</color>
     <color name="orange">#fd511e</color>
-    <color name="darkBlue">#1c213c</color>
-    <color name="blue">#3121e4</color>
+    <color name="darkBlue">#55156D</color>
+    <color name="purple">#6F1DA2</color>
     <color name="toolbar">#1e1b4b</color>
     <color name="grey">#383030</color>
     <color name="red">#DF1D1D</color>
     <color name="card">#97C5C7</color>
+    <color name="cardbg">#AAA1AB</color>
 </resources>
