@@ -4,18 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.ampproject.Models.workoutVideo;
 import com.example.ampproject.R;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
@@ -24,52 +19,44 @@ public class workoutVideoAdapter extends RecyclerView.Adapter<workoutVideoAdapte
   private Context context;
   private List<workoutVideo> workoutVideoList;
 
-  private FirebaseFirestore db;
-
   public workoutVideoAdapter(Context context, List<workoutVideo> workoutVideoList) {
     this.context = context;
     this.workoutVideoList = workoutVideoList;
-    this.db = FirebaseFirestore.getInstance();
   }
 
   @NonNull
   @Override
   public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.videoitem, parent, false);
+    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.video_item, parent, false);
     return new ViewHolder(view);
   }
 
   @Override
   public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    workoutVideo currentItem = workoutVideoList.get(position);
+    // Get the workoutVideo object at this position
+    workoutVideo video = workoutVideoList.get(position);
 
-    // Set data for views
-    holder.title.setText(currentItem.getTitle());
-    holder.header.setText(currentItem.getHeader());
-    holder.duration.setText(currentItem.getDuration());
-
-//     Use Glide to load the image from URL
-//    Glide.with(context)
-//      .load(currentItem.getImageUrl())
-//      .into(holder.imageView);
-
+    // Bind the data to the views
+    holder.titleTextView.setText(video.getTitle());
+    holder.headerTextView.setText(video.getHeader());
+    holder.durationTextView.setText(video.getDuration());
   }
 
   @Override
   public int getItemCount() {
-    return workoutVideoList.size();
+    return workoutVideoList.size(); // Return the size of the list
   }
 
   public static class ViewHolder extends RecyclerView.ViewHolder {
-    ImageView imageView;
-    TextView title, header, duration;
+    TextView titleTextView, headerTextView, durationTextView;
 
     public ViewHolder(@NonNull View itemView) {
       super(itemView);
-      imageView = itemView.findViewById(R.id.videoImage);
-      title = itemView.findViewById(R.id.videoTitle);
-      header = itemView.findViewById(R.id.videoHeader);
-      duration = itemView.findViewById(R.id.videoDuration);
+
+      // Initialize TextViews from the layout
+      titleTextView = itemView.findViewById(R.id.videoTitle);
+      headerTextView = itemView.findViewById(R.id.videoHeader);
+      durationTextView = itemView.findViewById(R.id.videoDuration);
     }
   }
 }

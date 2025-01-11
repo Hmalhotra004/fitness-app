@@ -2,6 +2,7 @@ package com.example.ampproject;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,53 +10,34 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ampproject.Adapter.workoutVideoAdapter;
 import com.example.ampproject.Models.workoutVideo;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpperbodyActivity extends AppCompatActivity {
+public class UpperBodyActivity extends AppCompatActivity {
 
-  public RecyclerView recyclerView;
-
-  public workoutVideoAdapter videoAdapter;
-
+  private RecyclerView recyclerView;
+  private workoutVideoAdapter videoAdapter;
   private List<workoutVideo> videoItemList;
-
   private FirebaseFirestore db;
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_upperbody);
+    setContentView(R.layout.activity_upper_body);
 
     db = FirebaseFirestore.getInstance();
 
-    recyclerView=findViewById(R.id.upperbodyrecycler);
-    if (recyclerView != null) {
-      recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-    }
+    recyclerView = findViewById(R.id.upperbodyRec);
+    recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
     videoItemList = new ArrayList<>();
-
-    videoAdapter=new workoutVideoAdapter(this,videoItemList);
+    videoAdapter = new workoutVideoAdapter(this, videoItemList);
     recyclerView.setAdapter(videoAdapter);
-
-//    if (clickableLayout != null) {
-//      clickableLayout.setOnClickListener(v -> {
-//        // Show a toast message indicating the layout was clicked
-//        Toast.makeText(this, "Layout clicked", Toast.LENGTH_SHORT).show();
-//
-//        // Redirect to YouTube video using Intent
-//        String videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Replace with your YouTube video ID
-//        Intent intent = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(videoUrl));
-//        startActivity(intent);
-//      });
-//    } else {
-//      Toast.makeText(this, "Clickable layout not found", Toast.LENGTH_SHORT).show();
-//    }
 
     fetchVideos();
   }

@@ -5,6 +5,12 @@ public class workoutVideo {
 
   public workoutVideo() {}
 
+  public workoutVideo(String title, String header, String duration) {
+    this.title = title;
+    this.header = header;
+    this.duration = duration;
+  }
+
   public String getTitle() {
     return title;
   }
