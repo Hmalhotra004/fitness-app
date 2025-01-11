@@ -1,7 +1,7 @@
 package com.example.ampproject.Models;
 
 public class workoutVideo {
-  public String title,header,duration,imageUrl;
+  public String title,header,duration;
 
   public workoutVideo() {}
 
@@ -29,11 +29,11 @@ public class workoutVideo {
     this.duration = duration;
   }
 
-  public String getImageUrl() {
-    return imageUrl;
-  }
-
-  public void setImageUrl(String imageUrl) {
-    this.imageUrl = imageUrl;
-  }
+//  public String getImageUrl() {
+//    return imageUrl;
+//  }
+//
+//  public void setImageUrl(String imageUrl) {
+//    this.imageUrl = imageUrl;
+//  }
 }

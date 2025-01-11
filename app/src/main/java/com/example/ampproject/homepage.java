@@ -22,9 +22,9 @@ public class homepage extends AppCompatActivity {
     card1.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Intent intent = new Intent(homepage.this, upperbody.class);
+        Intent intent = new Intent(homepage.this, UpperbodyActivity.class);
         startActivity(intent);
-//        finish();
+        finish();
       }
     });
   }
