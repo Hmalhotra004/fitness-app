@@ -45,5 +45,10 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.glide)
     implementation(libs.android.gif.drawable)
-    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.30")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.30")
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-database:20.0.5")
 }
