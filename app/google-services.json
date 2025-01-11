@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399004179662",
+    "project_id": "trainify-48425",
+    "storage_bucket": "trainify-48425.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399004179662:android:83bd7deaf7f413ac06449f",
+        "android_client_info": {
+          "package_name": "com.example.ampproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCBvaYI6ODImhZW63tUj3DUK21I4yMI78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
