@@ -4,13 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class homepage extends AppCompatActivity {
 
@@ -27,7 +22,7 @@ public class homepage extends AppCompatActivity {
     card1.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Intent intent = new Intent(homepage.this,Under18.class);
+        Intent intent = new Intent(homepage.this, upperbody.class);
         startActivity(intent);
 //        finish();
       }
