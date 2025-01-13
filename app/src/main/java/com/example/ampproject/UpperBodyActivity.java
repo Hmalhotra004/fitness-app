@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,7 +34,7 @@ public class UpperBodyActivity extends AppCompatActivity {
     db = FirebaseFirestore.getInstance();
 
     recyclerView = findViewById(R.id.upperbodyRec);
-    recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+    recyclerView.setLayoutManager(new GridLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
     videoItemList = new ArrayList<>();
     videoAdapter = new workoutVideoAdapter(this, videoItemList);

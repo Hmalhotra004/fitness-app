@@ -50,4 +50,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.glide)
     implementation(libs.android.gif.drawable)
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
 }
