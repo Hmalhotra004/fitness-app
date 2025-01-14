@@ -33,7 +33,7 @@
             android:name=".UpperBodyActivity"
             android:exported="false" />
         <activity
-            android:name=".UpperbodyActivity"
+            android:name=".FullBodyActivity"
             android:exported="false" />
         <activity
             android:name=".homepage"
