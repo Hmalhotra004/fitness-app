@@ -16,25 +16,30 @@
         android:background="@color/darkBlue"
         app:titleTextColor="@color/white" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="388dp"
-        android:src="@drawable/upperpg" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/upperpg" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
                 <ImageView
@@ -54,6 +59,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -73,6 +79,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
