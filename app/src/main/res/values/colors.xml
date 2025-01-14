@@ -13,4 +13,5 @@
     <color name="cardbg">#AAA1AB</color>
     <color name="bmicard">#8d7295</color>
     <color name="gifbg">#8d7295</color>
+    <color name="bg">#ce9fdb</color>
 </resources>

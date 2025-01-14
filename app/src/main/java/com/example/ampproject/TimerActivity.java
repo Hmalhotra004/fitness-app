@@ -9,19 +9,21 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import java.io.IOException;
 import java.util.Locale;
+
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 public class TimerActivity extends AppCompatActivity {
 
   TextView countdownTimer;
   CountDownTimer timer;
   Button start;
+  GifImageView gif;
+  TextView toolbarTitle;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,19 @@ public class TimerActivity extends AppCompatActivity {
 
     countdownTimer = findViewById(R.id.countdownTimer);
     start = findViewById(R.id.start);
+    gif = findViewById(R.id.gifImageView);
+
+    toolbarTitle = findViewById(R.id.toolbar_title);
+
+    toolbarTitle.setText(title);
+
+    int gifResId = getResources().getIdentifier(image, "drawable", getPackageName());
+    if (gifResId != 0) {
+      gif.setImageResource(gifResId);
+    } else {
+      Toast.makeText(this, "Image not found", Toast.LENGTH_SHORT).show();
+    }
+
 
     start.setOnClickListener(new View.OnClickListener() {
       @Override

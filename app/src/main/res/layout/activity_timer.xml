@@ -9,19 +9,7 @@
     android:orientation="vertical"
     tools:context=".TimerActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        app:title="Jumping Jacks"
-        app:titleTextColor="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/darkBlue" />
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_width="409dp"
-        android:layout_height="456dp"
-        android:src="@drawable/upper1_jumpingjacks" />
 
     <TextView
         android:id="@+id/countdownTimer"
@@ -29,16 +17,70 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="00:00:00"
-        android:textSize="50sp" />
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/darkBlue"
+        android:textSize="50dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="75dp"
+        android:background="#9167B2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Jumping Jacks"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/toolbar_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="3 X 20 Reps"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="368dp"
+        android:layout_height="440dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/upper1_jumpingjacks" />
 
     <Button
         android:id="@+id/start"
-        android:layout_width="wrap_content"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/darkBlue"
         android:text="Start"
+        android:textColor="@color/white"
         android:textSize="20dp"
 
-        />
+        app:cornerRadius="0dp" />
 
 </LinearLayout>
