@@ -55,22 +55,22 @@
 
                     <ImageView
                         android:id="@+id/card1"
-                        android:layout_width="200dp"
-                        android:layout_height="300dp"
-                        android:layout_marginStart="10dp"
-                        app:srcCompat="@drawable/card2" />
-
-                    <ImageView
-                        android:id="@+id/card2"
-                        android:layout_width="200dp"
-                        android:layout_height="300dp"
+                        android:layout_width="250dp"
+                        android:layout_height="350dp"
                         android:layout_marginStart="10dp"
                         app:srcCompat="@drawable/card1" />
 
                     <ImageView
+                        android:id="@+id/card2"
+                        android:layout_width="250dp"
+                        android:layout_height="350dp"
+                        android:layout_marginStart="10dp"
+                        app:srcCompat="@drawable/card2" />
+
+                    <ImageView
                         android:id="@+id/card3"
-                        android:layout_width="200dp"
-                        android:layout_height="300dp"
+                        android:layout_width="250dp"
+                        android:layout_height="350dp"
                         android:layout_marginStart="10dp"
                         app:srcCompat="@drawable/card3" />
                 </LinearLayout>
